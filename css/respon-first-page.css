@@ -385,11 +385,7 @@
         transition: all 0.3s ease;
     }
 
-    .contact .title::after{
-        background: #111;
-        box-shadow: 0px 0px 100px rgb(173, 25, 25);
-        content: "Fale comigo";
-    }
+   
     /* transform: translate3d("Eixo X", "Eixo Y", "Eixo Z") */
     [data-anime]{
         opacity: 0;

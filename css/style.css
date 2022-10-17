@@ -1,0 +1,517 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap');
+
+/* Zerando CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Space Mono', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+
+/* Códigos similares */
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* Navbar Ínicio */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar.sticky{
+    padding: 5px;
+    background: rgb(166, 81, 245);
+    box-shadow: 0px 5px 10px rgb(166, 81, 245);
+}
+.navbar .logo img{
+    width: 25px;
+    transform: translateY(0px);
+    animation: float 2s ease-in-out infinite;
+}
+.navbar .logo .d-hover:hover{
+    filter: brightness(80%);
+    transform: scale(1.05);
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    padding: 10px;
+}
+.navbar .menu li a:hover{
+    filter: brightness(40%);
+    transition: all 0.2s ease;
+}
+.navbar.sticky .menu li a:hover{
+    filter: brightness(50%);
+}
+
+/* Todos os códigos similares */
+section{
+    padding: 100px 0;
+}
+.about .about-content,
+.services .serv-content, 
+.skills .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 200px;
+    height: 1px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(166, 81, 245);
+    padding: 0px;
+    transform: translateX(-50%);
+}
+
+/*  Menu  Mobile */
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    width: 42px;
+    height: 45px;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    background: rgb(166, 81, 245);
+    box-shadow: 0px 0px 30px rgb(166, 81, 245);
+    border-radius: 50px;
+    font-size: 30px;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+    box-shadow: 0px 0px 60px rgb(166, 81, 245);
+}
+
+/* Sessão Ínicio */
+.home{
+    display: flex;
+    background: url("../img/morfey-banner-1680-832.png") no-repeat center;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    border: 2px solid rgb(166, 81, 245);
+    box-shadow: 0px 0px 30px #000;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .max-width .row{
+    margin-right: 0;
+}
+.home .home-content .text-2{
+    font-size: 50px;
+    font-weight: 500;
+    margin-left: -3px;
+    text-transform: uppercase;
+}
+.home .home-content p{
+    font-size: 18px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: rgb(166, 81, 245);
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background: rgb(166, 81, 245);
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: 2px solid rgb(166, 81, 245);
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: rgb(166, 81, 245);
+    box-shadow: 0px 0px 20px rgb(166, 81, 245);
+    background: none;
+    letter-spacing: 0.5px;
+}
+
+/* Sessão Sobre */
+.about{
+    width: 100%;
+    height: auto;
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+}
+.about .max-width{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+}
+.about .about-content .left{
+    flex: 21rem;
+}
+.about .about-content .left img{
+    width: 60%;
+    object-fit: contain;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+.about .about-content .right{
+    flex: 40rem;
+}
+.about .about-content .right .text{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+.about .about-content .right .text span{
+    color: #000;
+}
+.about .about-content .right p{
+    font-size: 15px;
+    text-align: justify;
+    color: white;
+}
+
+/*  Sessão Projects */
+.projects{
+    background-image: url(../img/slide-project-04.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.50);
+    background-blend-mode: multiply;
+    border: 2px solid rgb(166, 81, 245);
+    box-shadow: 0px 0px 50px #000;
+    padding-top: 70px;
+    width: 100%;
+}
+/* Slider Automático dos Projects */
+.projects .title{
+    color: white;
+}
+.projects .title::before{
+    background: white;
+}
+.projects .title::after{
+    background: #000;
+}
+.projects .hero .container{
+    display: none;
+}
+/* Slider Automático dos Projects */
+.projects .swiper-container{
+    display: flex;
+}
+.projects .slider{
+    overflow: hidden;
+}
+.projects .slider .slide{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.projects .slider .slide .image{
+    flex: 1 1 60rem;
+}
+.projects .slider .slide .image img{
+    width: 70%;
+    border-radius: 20px;
+}
+
+/*  Sessão Habilidades */
+.skills{
+    padding-top: 70px;
+    background-image: url(../img/skills.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.skills .max-width{
+    padding: 0;
+}
+.skills .swiper-container{
+    display: none;
+}
+.skills .skills-content .column{
+    width: calc(40% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+    font-size: 14px;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: rgb(166, 81, 245);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: 2px solid rgb(166, 81, 245);
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: #000;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 20px #000;
+    background: none;
+    letter-spacing: 0.5px;
+}
+/* Slider Automático dos Skills */
+.skills .skills-content .carousel{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.skills .skills-content .carousel-slider{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: calc(55% - 0px);
+    height: 200px;
+}
+.skills .skills-content .carousel-list{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .carousel-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    cursor: pointer;
+    padding: 0 100px;
+}
+.skills .skills-content .carousel-item:hover{
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 30%;
+}
+.skills .skills-content .carousel-item img{
+    width: 100px;
+}
+
+/* Sessão Contato */
+.contact{
+    border-top: 2px solid rgb(166, 81, 245);
+    box-shadow: 0px 0px 50px #000;
+    width: 100%;
+    background-image: url(../img/planet.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.85);
+    background-blend-mode: multiply;
+    color: white;
+    padding-top: 70px;
+    padding-bottom: 120px;
+    overflow: hidden;
+}
+.contact .max-width{
+    padding: 25px;
+}
+.contact .title::before{
+    background: white;
+}
+.contact .contact-content{
+    align-items: flex-start;
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+    font-size: 14px;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .left .redes-sociais img{
+    width: 30px;
+    margin: 20px 20px 0px 0px;
+}
+.contact .contact-content .left .redes-sociais img:hover{
+    transform: scale(1.10);
+    filter: brightness(60%);
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row p{
+    font-size: 14px;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .row .info .sub-title{
+    color: white;
+}
+.contact .contact-content .row img{
+    width: 25px;
+    color: white;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 12px;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .textarea{
+    width: 100%;
+    height: 60px;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    width: 170px;
+    height: 47px;
+    margin-top: -10px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 80%;
+    border: 2px solid rgb(166, 81, 245);
+    background: rgb(166, 81, 245);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    color: rgb(166, 81, 245);
+    box-shadow: 0px 0px 20px rgb(166, 81, 245);
+    background: none;
+    letter-spacing: 0.5px;
+}
+
+/*  Sessão footer  */
+.footer{
+    background: rgb(0, 0, 0);
+    padding: 15px 0px;
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    box-shadow: 0px 0px 50px #000;
+}
